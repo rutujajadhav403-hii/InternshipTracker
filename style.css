@@ -143,3 +143,18 @@ h1{
     cursor:pointer;
 
 }
+/* Mobile responsive*/
+@media (max-width: 768px){
+    .board{
+        flex-direction: column;
+    }
+    .column{
+        width: 100%;
+        min-width: unset;
+    }
+    .stats{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+}
