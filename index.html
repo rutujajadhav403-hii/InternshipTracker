@@ -4,102 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internship Tracker</title>
-     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class = "container">
-          <h1>Internship Tracker </h1> 
-          <div class="dashboard">
-
-    <input 
-    type="text" 
-    id="searchInput" 
-    placeholder="Search internship..."
-    >
-
-
-    <div class="counter">
-
-        <p>Total: <span id="totalCount">0</span></p>
-
-        <p>Applied: <span id="appliedCount">0</span></p>
-
-        <p>Interview: <span id="interviewCount">0</span></p>
-
-        <p>Offer: <span id="offerCount">0</span></p>
-
-        <p>Selected: <span id="selectedCount">0</span></p>
-
-        <p>Rejected: <span id="rejectedCount">0</span></p>
-
-
+<div class="container">
+    <h1>Internship Tracker</h1>
+    <div class="dashboard">
+        <input type="text" id="searchInput" placeholder="Search internship...">
+        <div class="counter">
+            <p>Total: <span id="totalCount">0</span></p>
+            <p>Applied: <span id="appliedCount">0</span></p>
+            <p>Interview: <span id="interviewCount">0</span></p>
+            <p>Offer: <span id="offerCount">0</span></p>
+            <p>Selected: <span id="selectedCount">0</span></p>
+            <p>Rejected: <span id="rejectedCount">0</span></p>
+        </div>
     </div>
-
-</div> 
-          <div class = "board">
-            <div class = "column">
-                <h3 class="applied">Applied</h3>
-                <div class = "card">
-                    
-                    <h3>Company </h3>
-                    <p>Job</p>
-                    <small>Location</small>
-                </div>
-                
-               <button class="add-btn">+ Add</button>
-            </div>
-            <div class="column">
-                <h3 class="shortlisted">Shortlisted</h3>
-                
-                <div class ="card">
-                    <h3>Company</h3>
-                    <p>Job</p>
-                    <small>Location</small>
-                </div>
-
-                <button class="add-btn">+ Add</button>
-            </div>
-
-              
-            <div class = "column">
-                 <h3 class ="offer">Offer</h3>
-                
-               
-                <div class = "card">
-                    <h3>Company</h3>
-                    <p>Job</p>
-                    <small>Location</small>
-                </div>
-
-                <button class="add-btn">+ Add</button>
-            </div>
-
-
-                
-
-                <div class ="column">
-                    <h3 class=" selected">Selected</h3>
-
-                   <button class="add-btn">+ Add</button>
-                
-                </div>
-
-
-                <div class="column">
-                    <h3 class = "rejected">Rejected</h3>
-                 <button class="add-btn">+ Add</button>
-                </div>
-
-
-
-    
-            </div>
-
+    <div class="board">
+        <div class="column">
+            <h3 class="applied">Applied</h3>
+            <button class="add-btn">+ Add</button>
+        </div>
+        <div class="column">
+            <h3 class="shortlisted">Shortlisted</h3>
+            <button class="add-btn">+ Add</button>
+        </div>
+        <div class="column">
+            <h3 class="offer">Offer</h3>
+            <button class="add-btn">+ Add</button>
+        </div>
+        <div class="column">
+            <h3 class="selected">Selected</h3>
+            <button class="add-btn">+ Add</button>
+        </div>
+        <div class="column">
+            <h3 class="rejected">Rejected</h3>
+            <button class="add-btn">+ Add</button>
+        </div>
     </div>
-    <script src = "app.js"></script>
-   
-   
-    
+</div>
+
+<!-- MODAL -->
+<div id="modal">
+    <div class="modal-box">
+        <h2 id="modalTitle">Add Internship</h2>
+        <form id="internshipForm">
+            <input id="f-company" placeholder="Company name *" required>
+            <input id="f-role" placeholder="Role *" required>
+            <input id="f-location" placeholder="Location">
+            <input id="f-link" placeholder="Job link">
+            <textarea id="f-notes" placeholder="Notes"></textarea>
+            <div class="modal-btns">
+                <button type="submit">Save</button>
+                <button type="button" id="cancelBtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
